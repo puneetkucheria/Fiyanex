@@ -1,0 +1,15 @@
+name: ftp-action
+uses: sebastianpopp/ftp-action@v2.0.0
+  with:
+    # FTP host
+    host: ftp.fiyanex.com
+    # FTP user
+    user: githubaction@fiyanex.com
+    # FTP password
+    password: Hanumanji~1
+    # Force SSL encryption
+    forceSsl: # optional, default is false
+    # Local directory
+    localDir: # optional, default is .
+    # Remote directory
+    remoteDir: # optional, default is .
