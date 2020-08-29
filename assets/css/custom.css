@@ -39,6 +39,7 @@
     margin-left: -200px;
     width: 600px;
   }
+}
 
 @media (min-width: 768px) {
   .iphone-28 {
@@ -47,17 +48,19 @@
     margin-left: 50px;
     width: 600px;
   }
+}
 
 @media (min-width: 768px) {
   .flex>.col-7-12 {
     width: 50%;
   }
+}
 
 @media (min-width: 768px) {
   .ae-4-light {
     margin-left: 70px;
   }
-
+}
 @media (min-width: 768px) {
   .ae-4-light {
     margin-left: 70px;
@@ -128,7 +131,7 @@
 .blue {
     background: #24bff2!important;
     color: #fff!important;
-
+}
 
 .helpBubble {
   cursor: pointer;
