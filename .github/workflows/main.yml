@@ -1,15 +1,22 @@
-name: ftp-action
-uses: sebastianpopp/ftp-action@v2.0.0
-  with:
-    # FTP host
-    host: ftp.fiyanex.com
-    # FTP user
-    user: githubaction@fiyanex.com
-    # FTP password
-    password: Hanumanji~1
-    # Force SSL encryption
-    forceSsl: # optional, default is false
-    # Local directory
-    localDir: # optional, default is .
-    # Remote directory
-    remoteDir: # optional, default is .
+on: push
+name: Publish website
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+          ftp-server: ftp.fiyanex.com
+          # FTP account username
+          ftp-username: githubaction@fiyanex.com
+          # FTP account password
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          # The local folder to copy, defaults to root project folder
+#           local-dir: # optional, default is ./
+          # Passes through options into git-ftp
+#           git-ftp-args: # optional
+        
